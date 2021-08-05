@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!-- <link rel="stylesheet" href="assets/css/master.css"> -->
+</head>
+<body>
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/dash.css">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+<body>
+    <!-- <h3>Welcome <span id="retrieve"></span></h3> -->
+   <section>
+       <div class="container-fluid">
+         <div class="row">
+             <!-- lg Devices Sidebar -->
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="sidenav">
+                    <nav>
+                        <ul class="list-unstyled navbar-nav">
+                            <li class="nav-item"><a class="nav-item text-decoration-none" href="dash.html">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-item text-decoration-none" href="upload.html">My Uploads</a></li>
+                            <li class="nav-item"><a class="nav-item text-decoration-none" href="update.html">Update Profile</a></li>
+                            <li class="nav-item"><a class="nav-item text-decoration-none" href="change.html">Reset Password</a></li>
+                            <li class="nav-item" ><a class="nav-item text-decoration-none" onclick="clearData()"><i class="fas fa-arrow-left mr-2"></i> LogOut</a></li>
+                        </ul>
+         
+                        
+                    </nav>
+                </div>
+                
+               </div>
+                
+
+
+            <!-- main content  -->
+               <div class="col-lg-10 content">
+                <div class=" ml-4 content-text my-5 mb-4 d-flex justify-content-between">
+                   <div>
+                    <span id="retrieve"></span>
+                    <h2 class="display-4">Reset Password</h2>
+                   </div>
+                   <div class="menu-icon d-block  d-lg-none   d-none">
+                    <span id="show-btn"  class="text-capitalize">
+                      menu
+                     </span>
+                  </div>
+                    </div>
+                        <div class="change shadow-lg mb-3">
+                     <form action="#" method="POST" class="">
+                        <div class="mb-1">
+                            <label for="" class="mb-1">Old Password:</label>
+                            <input type="password"  class="form-control bg-transparent shadow-none border-0" required>
+                        </div> 
+                        <div class="mb-1">
+                            <label for="" class="mb-1">New Password:</label>
+                            <input type="password"  class="form-control bg-transparent shadow-none border-0" required>
+                        </div>
+                        <div class="mb-1">
+                            <label for="" class="mb-1">Confrim Password:</label>
+                            <input type="password"  class="form-control bg-transparent shadow-none border-0" required>
+                        </div>
+                        
+                   
+                        <div class="text-center py-2 border-0">
+                            <button type="button" onclick="change()" class="btn shadow-none  text-uppercase"> Submit</button>
+                           <!-- <input type="button" value="Submit" > -->
+                     </div> 
+                        
+                      </form>
+                    </div>
+                 
+                  
+           
+        
+         
+
+
+        <!-- mobile-devices  -->
+        <div class="mobilenav p-5 d-block d-lg-none d-none" id="mobileNav">
+          
+            <nav>
+                <span  id="hide-btn">
+                    <i class="fas fa-times"></i>
+                </span>
+                <ul class="list-unstyled navbar-nav">
+                    <li class="nav-item"><a class="nav-item text-decoration-none" href="dash.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-item text-decoration-none" href="upload.html">My Uploads</a></li>
+                    <li class="nav-item"><a class="nav-item text-decoration-none" href="update.html">Update Profile</a></li>
+                    <li class="nav-item"><a class="nav-item text-decoration-none" href="change.html">Change Password</a></li>
+                    <li class="nav-item" ><a class="nav-item text-decoration-none" onclick="clearData()"><i class="fas fa-arrow-left mr-2" ></i> LogOut</a></li>
+                </ul>
+ 
+ 
+                
+            </nav>
+        </div> 
+               
+       </div>
+
+
+   </section>
+
+  
+
+
+  
+   <script src="assets/js/jquery-1.12.4.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/all.min.js"></script>
+   <!-- <script src="assets/js/post.js"></script> -->
+   <!-- <script src="assets/js/main.js"></script> -->
+
+   <script>
+        const showBtn = document.getElementById("show-btn");
+        const hideBtn = document.getElementById("hide-btn");
+        showBtn.addEventListener('click', function(){
+            document.querySelector(".mobilenav").classList.add("navToggle");
+        });
+
+        hideBtn.addEventListener('click', function(){
+            document.querySelector(".mobilenav").classList.remove("navToggle");
+        });
+
+
+    function retrieveData(){
+        const userData = JSON.parse(localStorage.getItem('userData'));
+
+        if (!userData) {
+            window.location = "login.html";
+        }
+        document.getElementById('retrieve').innerHTML = userData.fullName;
+    }
+    retrieveData();
+
+
+
+    function clearData(){
+        localStorage.clear()
+        window.location = "login.html";
+    }
+
+   
+   </script>
+</body>
+</html>
+
