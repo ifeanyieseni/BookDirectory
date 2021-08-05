@@ -27,6 +27,7 @@ body,html{
     height: 100vh;
     width: 100%;
     position: relative;
+    background:linear-gradient(180deg,#474ab6 0%,#9271f6 100%) !important;
 }
 
 
