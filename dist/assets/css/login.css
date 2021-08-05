@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+   font-family: 'Open sans', sans-serif !important;
+}
+
+:root{
+    --font-family: 'Open Sans Condensed', sans-serif;
+
+    --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+.header{
+    background-image:linear-gradient(180deg,#474ab6 0%,#9271f6 100%);
+    filter: brightness(90%);
+    min-height: 100vh;
+}
+.login{
+    position: fixed;
+    top: 0;
+}
+
+.login  h3{
+    font-size: var(--biggest-font-size);
+    color: #dcd9eb !important;
+}
+.fa-arrow-left{
+    height: 30px;
+    font-size: var(--h3-font-size);
+    color: #EEEDF2;
+}
+.form-wrapper{
+        border-radius: 0.555rem;
+        background: #EEEDF2;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 100px !important;
+}
+
+
+
+
+
+
+
+
+
+.form-wrapper label,
+.gnd{
+    font-size: 0.993rem;
+    letter-spacing: 2px;
+    color:#212528;
+}
+
+input[type="password"],
+input[type="date"],
+input[type="file"],
+input[type="text"],
+input[type="email"],
+input[type="name"],
+textarea{
+    color: #796565 !important;
+    background: #dcd9eb !important;
+    font-size: 17px;
+    /* border-radius: 18px; */
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.textarea:focus{
+    border: 0 !important;
+    outline: 0;
+    box-shadow: none !important;
+}
+
+
+.btn{
+    background:#474ab6;
+    color: #EEEDF2;
+    font-weight: 300;
+    font-family: var(--font-family);
+    text-align: center;
+    font-size:var(--h2-font-size);
+    border: 0 !important;
+    outline: none !important;
+    padding: 8px 30px;
+}
+.btn:hover{
+    text-decoration: none;
+    color: #EEEDF2;
+}
+.no-account span{
+    font-size: 16px;
+}
+
+.no-account span > a{
+    color: #9271f6;
+    font-weight: var(--font-semi-bold);
+    font-size: 18px;
+}
+
+
