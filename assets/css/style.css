@@ -29,7 +29,7 @@ body,html{
     position: relative;
     /* background-blend-mode: overlay;
     /* filter: brightness(85%); */
-    background-image:linear-gradient(180deg,#474ab6 0%,#9271f6 100%), url(../img1/coding-background-texture.jpg)!important; */
+    /* background-image:linear-gradient(180deg,#474ab6 0%,#9271f6 100%), url(../img1/coding-background-texture.jpg)!important; */ */
 }
 
 
