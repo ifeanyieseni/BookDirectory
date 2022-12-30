@@ -1,120 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Open+Sans+Condensed:wght@300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-   font-family: 'Open sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open sans', sans-serif;
 }
 
-:root{
-    --biggest-font-size: 2.25rem;
+:root {
+  --biggest-font-size: 4rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.35rem;
   --font-medium: 500;
   --font-semi-bold: 600;
+  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  /* HSL color mode */
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --title-color: hsl(var(--hue-color), 8%, 95%);
+  --text-color: hsl(var(--hue-color), 8%, 95%);
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 28%, 12%);
+  --btn-color: #adc065;
 }
 
-body,html{
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
+body,
+html {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
-.container{
-    max-width: 1100px;
-}
-
-
-.showcase{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background-blend-mode: overlay;
-    filter: brightness(85%);
-    background-image:linear-gradient(180deg,#474ab6 0%,#9271f6 100%), url(https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-background-texture.jpg)!important;
+.container {
+  max-width: 1100px;
 }
 
+.showcase {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-blend-mode: overlay;
+  filter: brightness(85%);
+  background-image: linear-gradient(
+      180deg,
+      var(--body-color) 0%,
+      var(--body-color) 100%
+    ),
+    url(https://www.elegantthemes.com/layouts/wp-content/uploads/2017/12/coding-background-texture.jpg) !important;
+}
 
 .header-text,
-.cta-buttons{
-    width:90%;
+.cta-buttons {
+  width: 90%;
 }
 
-.header-text h5{
-    font-size: var(--biggest-font-size);
-    color: #fff ;
-    font-weight: var(--font-medium);
-    line-height: 1.6;
+.header-text h5 {
+  font-size: var(--biggest-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  line-height: 80px;
+  margin-bottom: 20px;
 }
 
-.header-text  p{
-    font-size: 20px;
-    color:#F3ECFF !important;
-    /* letter-spacing: 1px; */
+.header-text p {
+  font-size: 20px;
+  color: var(--text-color) !important;
+  /* letter-spacing: 1px; */
 }
 
-.search{
-    border: 1px solid  #f3ecff99;
-    border-radius: 55rem ;
+.search {
+  border: 1px solid #f3ecff99;
+  border-radius: 55rem;
 }
 
- .search input[type="text"]{
-    color: #F3ECFF !important;
+.search input[type='text'] {
+  color: #f3ecff !important;
 }
 
-
-
-
-.search button{
-   background:#F3ECFF ;
-   border-radius: 0 55rem 65rem 0;  
-   font-size: var(--h3-font-size);
- } 
-
-
-
- .cta-buttons p{
-    font-size: 18px;
- }
-a.btn-register{
-   background:#ADC065;
-   padding: 10px 28px;
-   color: #ffff;
+.search button {
+  background: #f3ecff;
+  border-radius: 0 55rem 65rem 0;
+  font-size: var(--h3-font-size);
 }
 
-a.btn-register:hover{
-    -moz-box-shadow:0px 0px 18px 26px #ADC065;
-    -webkit-box-shadow:0px 0px 18px 26px #ADC065;
-    box-shadow:0px 0px 26px -9px #ADC065;
-    text-decoration: none;
-   
-    
+.cta-buttons p {
+  font-size: 18px;
+  font-weight: var(--font-semi-bold);
+}
+a.btn-register {
+  background: #adc065;
+  padding: 10px 30px;
+  color: #ffff;
 }
 
-
-
-a.btn-login{
-   border: 2px solid #ADC065;
-   color: #ffff;
-   padding: 10px 30px;
+a.btn-register:hover {
+  box-shadow: 0px 0px 26px -10px #adc065;
+  text-decoration: none;
 }
 
-a.btn-login:hover{
-    background:#03a78e  !important;
-    color:#ffff ;
+a.btn-login {
+  border: 2px solid #adc065;
+  color: #ffff;
+  padding: 10px 30px;
+  transition: 650ms ease-in-out;
 }
 
+a.btn-login:hover {
+  transform: scale(1.1);
+}
 
+@media (min-width: 768px) {
+  .search {
+    width: 75%;
+  }
 
-
-@media (min-width:768px){
-   .search{
-       width: 75%;
-   }
-
-   :root{
+  :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.45rem;
   }
 }
 
-
+@media (max-width: 900px) {
+  .header-text p {
+    font-size: 15px;
+  }
+}
